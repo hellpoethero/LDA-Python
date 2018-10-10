@@ -8,10 +8,11 @@ class FeatureSequence:
 
     def set_sentences(self, tokens, dictionary):
         self.dictionary = dictionary
-        temp_features = []
-        for token in tokens:
-            temp_features.append(dictionary.index(token))
-        self.features = temp_features
+        # temp_features = []
+        # for token in tokens:
+        #     temp_features.append(dictionary.index(token))
+        # self.features = temp_features
+        self.features = tokens
         self.length = len(self.features)
 
     def __repr__(self):

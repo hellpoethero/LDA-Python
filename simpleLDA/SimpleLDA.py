@@ -1,4 +1,5 @@
 import random
+import time
 
 from simpleLDA import TopicAssignment, LabelSequence, SortedWord, SortedTopic
 
@@ -33,27 +34,23 @@ class SimpleLda:
         self.tokensPerTopic = [0] * self.numTopics
 
     def add_instances(self, training):
+
         self.alphabet = training.dataAlphabet
         self.numTypes = len(self.alphabet)
         self.betaSum = self.beta * self.numTypes
         self.topicAlphabet = training.targetAlphabet
 
-        for i in range(0, self.numTypes):
-            temp_array = []
-            for j in range(0, self.numTopics):
-                temp_array.append(0)
-            self.typeTopicCounts.append(temp_array)
-        # print(self.typeTopicCounts)
+        self.typeTopicCounts = [[
+            0 for j in range(0, self.numTopics)] for i in range(0, self.numTypes)]
         print(self.numTypes)
+
+        start_time = time.time()
 
         doc = 0
         for instance in training.instances:
             doc += 1
             tokens = instance.data
-            topics = []
-            for i in range(0, tokens.length):
-                topics.append(-1)
-            topic_sequence = LabelSequence.LabelSequence(self.topicAlphabet, topics)
+            topic_sequence = LabelSequence.LabelSequence(self.topicAlphabet, [-1] * tokens.length)
 
             topics = topic_sequence.features
             for position in range(0, tokens.length):
@@ -74,6 +71,8 @@ class SimpleLda:
         #     print(self.alphabet[i], end='\t')
         #     print(count)
         #     i += 1
+        end_time = time.time()
+        print("1: " + str(end_time - start_time))
 
     def sample(self, iterations):
         for iteration in range(0, iterations):

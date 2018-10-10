@@ -7,10 +7,14 @@ class PreProcessing:
         self.special_characters = True
         self.to_lower = True
         self.must_contain_word = True
+        self.pat1 = re.compile('[^0-9a-zA-Z ]+')
+        self.pat2 = re.compile('[a-z]+')
 
     def process(self, string):
         if self.special_characters:
+            # string = self.pat1.sub('', string)
             string = re.sub("[^0-9a-zA-Z ]+", '', string)
+            # string = re.sub(r"[^\w]", ' ', string)
         if self.to_lower:
             string = string.lower()
         tokens = string.split()
@@ -18,6 +22,7 @@ class PreProcessing:
             temp_result = []
             for token in tokens:
                 if re.match("[a-z]+", token) is not None:
+                    # if self.pat2.match(token) is not None:
                     # print(token)
                     temp_result.append(token)
             tokens = temp_result

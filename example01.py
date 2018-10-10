@@ -1,5 +1,6 @@
 from simpleLDA import InstanceList, PreProcessing, SimpleLDA
-import time, datetime
+import time
+import datetime
 
 a = InstanceList.InstanceList()
 pre_processing = PreProcessing.PreProcessing()
@@ -8,13 +9,16 @@ a.set_pre_processing(pre_processing)
 # a.load_directory('D:\Research\Project\mallet\sample-data\web\en')
 
 print("Load file")
+
+start_read_time = time.time()
 a.load_file('D:/Download/ap/Associated Press.txt')
+end_read_time = time.time()
+print("Read file duration: " + str(end_read_time - start_read_time))
 
 lda = SimpleLDA.SimpleLda(10, 50, 0.01)
-lda.add_instances(a)
 print("Run sampling")
 start_time = time.time()
-lda.sample(1000)
+lda.add_instances(a)
 end_time = time.time()
 print(
     "start: "
@@ -22,3 +26,5 @@ print(
     + " end: "
     + datetime.datetime.fromtimestamp(end_time).strftime('%Y-%m-%d %H:%M:%S')
     + " duration: " + str(end_time - start_time))
+
+# lda.sample(1)
