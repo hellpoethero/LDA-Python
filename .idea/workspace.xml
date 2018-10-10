@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8c94bbf-8c8c-49c4-b8de-224d9a94cf9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/preprocessing/ReadGowalla.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LDA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LDA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example01.py" beforeDir="false" afterPath="$PROJECT_DIR$/example01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example01/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example01/main01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleLDA/FeatureSequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/simpleLDA/FeatureSequence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleLDA/InstanceList.py" beforeDir="false" afterPath="$PROJECT_DIR$/simpleLDA/InstanceList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleLDA/PreProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/simpleLDA/PreProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleLDA/SimpleLDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/simpleLDA/SimpleLDA.py" afterDir="false" />
-    </list>
+    <list default="true" id="e8c94bbf-8c8c-49c4-b8de-224d9a94cf9b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/preprocessing/ReadGowalla.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -503,7 +490,7 @@
     <entry file="file://$PROJECT_DIR$/preprocessing/ReadGowalla.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
