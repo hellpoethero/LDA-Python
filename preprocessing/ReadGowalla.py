@@ -2,12 +2,20 @@ import pandas as pd
 import random
 
 # inputFile = "D:\Research\Dataset\Gowalla_totalCheckins.txt"
-inputFile = "D:/Research/Project/LDA/data/checkin/Gowalla_totalCheckins_chekin10.txt"
+inputFile = "D:/Research/Dataset/checkin/Gowalla_totalCheckins_chekin10.txt"
 data = pd.read_csv(inputFile, sep='\t', header=None)
 
-print(len(data))
+us_ca = pd.read_csv("D:/Research/Dataset/checkin/newyork.txt", sep=',', header=0)
+us_ca_places = us_ca['id'].values.tolist()
+# print(us_ca_places)
+# print(data)
 
-x1 = data.groupby(0)[1]
+a = data[data[1].isin(us_ca_places)]
+print(a)
+print(len(a))
+print(a[1].value_counts())
+
+x1 = a.groupby(0)[1]
 x1_list = x1.apply(list)
 # print(x1_list)
 
@@ -35,8 +43,8 @@ for place in x1_list:
                 test_count += 1
                 test_set.add(p)
         # place_str = " ".join(map(str, place))
-        places_train.append(" ".join(map(str, train)))
-        places_test.append(" ".join(map(str, test)))
+        places_train.append("a b "+" ".join(map(str, train)))
+        places_test.append("a b "+" ".join(map(str, test)))
 
 print(len(places_train))
 print(len(places_test))
@@ -46,11 +54,11 @@ print(len(train_set))
 print(len(test_set))
 print(len(train_set & test_set))
 
-# with open("D:/Research/Project/LDA/data/checkin/user_checkin_above_10x10x5_train.txt", "w") as outFile:
-#     outFile.write("\n".join(places_train))
-#
-# with open("D:/Research/Project/LDA/data/checkin/user_checkin_above_10x10x5_test.txt", "w") as outFile:
-#     outFile.write("\n".join(places_test))
+with open("D:/Research/Dataset/checkin/user_checkin_above_10x10x5_ny_train.txt", "w") as outFile:
+    outFile.write("\n".join(places_train))
+
+with open("D:/Research/Dataset/checkin/user_checkin_above_10x10x5_ny_test.txt", "w") as outFile:
+    outFile.write("\n".join(places_test))
 
 # x2 = data.groupby(1)[0]
 # print(len(x2))
