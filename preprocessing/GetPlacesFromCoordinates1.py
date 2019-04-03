@@ -4,6 +4,8 @@ from mpl_toolkits.basemap import Basemap
 from geopy.geocoders import Nominatim
 
 us_ca = pd.read_csv("D:/Research/Dataset/checkin/us_canada.txt", sep=',', header=0)
+# sanfrancisco = pd.read_csv("D:/Research/Dataset/checkin/sanfrancisco.txt", sep=',', header=0)
+# newyork = pd.read_csv("D:/Research/Dataset/checkin/newyork.txt", sep=',', header=0)
 places_in_city = us_ca[(us_ca['lat'] > 40.495006) & (us_ca['lat'] < 40.915483) &
            (us_ca['lon'] > -74.011864) & (us_ca['lon'] < -73.701145)]
 lats = places_in_city['lat'].values.tolist()
@@ -34,7 +36,7 @@ us_map = Basemap(llcrnrlon=-119, llcrnrlat=22, urcrnrlon=-64, urcrnrlat=49,
 us_map.readshapefile('st99_d00', name='states', drawbounds=True)
 
 # Get the location of each city and plot it
-# geolocator = Nominatim()
+geolocator = Nominatim()
 x, y = us_map(lons, lats)
 us_map.plot(x, y, 'ro')
 plt.show()

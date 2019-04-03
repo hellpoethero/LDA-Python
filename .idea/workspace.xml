@@ -2,36 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8c94bbf-8c8c-49c4-b8de-224d9a94cf9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/AverageRepeatPlaces.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/CheckTopPlaceInTopic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/CompareTrainTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/ExtractPlacesGowalla.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/GowallaCheckinRepeat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/InferPlace.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/InferPlaceWithPlaceFrequency.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/KmeanClustering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/PlacesClustering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/ReadData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/SortedWord.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/UserSimilarity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/UserSimilarity01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/UsersClustering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/WordTopicCount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization/AlphaVisualization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization/BasemapExample01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization/PositionHistogram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization/PyplotPoint.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization/PyplotText.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization/UsMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/Corpus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/Document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaAlpha.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaEstimate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaInference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaModel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/Utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/variationalLDA/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LDA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LDA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocessing/ReadGowalla.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/ReadGowalla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/__init__.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,10 +30,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/InferPlaceWithPlaceFrequency.py">
+        <entry file="file://$PROJECT_DIR$/variationalLDA/LdaModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+            <state relative-caret-position="44">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/variationalLDA/LdaInference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1804">
+              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -59,98 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualization/BasemapExample01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualization/UsMap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-              <folding>
-                <element signature="e#51#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/ReadGowalla.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/UsersClustering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="3" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/preprocessing/PlaceFrequency.py">
+        <entry file="file://$PROJECT_DIR$/variationalLDA/LdaEstimate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/KmeanClustering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="25" column="13" selection-start-line="7" selection-start-column="16" selection-end-line="25" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/PlacesClustering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-              <folding>
-                <element signature="e#54#88#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="302">
+              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -184,6 +88,10 @@
       <find>geolocator</find>
       <find>count</find>
       <find>to_csv</find>
+      <find>Gowalla_totalCheckins_chekin10</find>
+      <find>place_unique_user</find>
+      <find>user_checkin_above_10x10x3_test</find>
+      <find>place_unique_user_us</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,13 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/simpleLDA/TopicAssignment.py" />
-        <option value="$PROJECT_DIR$/simpleLDA/LabelAlphabet.py" />
-        <option value="$PROJECT_DIR$/abc/as.py" />
-        <option value="$PROJECT_DIR$/example/example01.py" />
-        <option value="$PROJECT_DIR$/simpleLDA/__init__.py" />
-        <option value="$PROJECT_DIR$/simpleLDA/Preprocessing.py" />
-        <option value="$PROJECT_DIR$/simpleLDA/SortedWord.py" />
         <option value="$PROJECT_DIR$/simpleLDA/SortedTopic.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -239,18 +140,24 @@
         <option value="$PROJECT_DIR$/preprocessing/InferPlaceWithPlaceFrequency.py" />
         <option value="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates.py" />
         <option value="$PROJECT_DIR$/preprocessing/GetLocationByCoordinate1.py" />
+        <option value="$PROJECT_DIR$/preprocessing/PlacesClustering.py" />
         <option value="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" />
         <option value="$PROJECT_DIR$/preprocessing/ReadGowalla.py" />
-        <option value="$PROJECT_DIR$/preprocessing/PlacesClustering.py" />
         <option value="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/LdaModel.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/Utils.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/LdaAlpha.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/Document.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/Corpus.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/LdaInference.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/LdaEstimate.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1931" />
+    <option name="height" value="527" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -268,12 +175,12 @@
             <path>
               <item name="LDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="LDA" type="462c0819:PsiDirectoryNode" />
-              <item name="preprocessing" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleLDA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LDA" type="b2602c69:ProjectViewProjectNode" />
               <item name="LDA" type="462c0819:PsiDirectoryNode" />
-              <item name="visualization" type="462c0819:PsiDirectoryNode" />
+              <item name="variationalLDA" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -291,7 +198,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -302,13 +209,14 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Research\Project\LDA\visualization" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Research\Project\LDA\variationalLDA" />
       <recent name="D:\Research\Project\LDA\preprocessing" />
       <recent name="D:\Research\Project\LDA\simpleLDA" />
       <recent name="D:\Research\Project\LDA" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Research\Project\LDA\visualization" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -493,16 +401,21 @@
       <workItem from="1544673105118" duration="4193000" />
       <workItem from="1547194995625" duration="26755000" />
       <workItem from="1548132970072" duration="599000" />
+      <workItem from="1550816810503" duration="6211000" />
+      <workItem from="1551609239558" duration="1806000" />
+      <workItem from="1552572844625" duration="1802000" />
+      <workItem from="1553487504952" duration="22272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129418000" />
+    <option name="totallyTimeSpent" value="161509000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-7" y="0" width="1931" height="527" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.17590618" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.09994655" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.16311301" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -515,7 +428,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49307036" visible="true" weight="0.3564464" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49307036" weight="0.83502537" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50692964" side_tool="true" weight="0.55856836" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32827735" />
@@ -571,49 +484,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simpleLDA/LabelSequence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleLDA/TopicAssignment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleLDA/SortedTopic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LDA.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="44">
-            <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example01/main.py" />
-    <entry file="file://$PROJECT_DIR$/example01/main01.py" />
     <entry file="file://$PROJECT_DIR$/example01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -642,13 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simpleLDA/FeatureSequence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -807,16 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/ReadData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <marker date="1543373835024" expanded="true" signature="37:42" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing/WordTopicCount.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1078">
@@ -857,12 +710,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing/GetLocationByCoordinate.py" />
     <entry file="file://$PROJECT_DIR$/preprocessing/GetLocationByCoordinate1.py" />
-    <entry file="file://$PROJECT_DIR$/preprocessing/InferPlaceWithPlaceFrequency.py">
+    <entry file="file://$PROJECT_DIR$/visualization/UsMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+        <state relative-caret-position="176">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#51#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/KmeanClustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="25" column="13" selection-start-line="7" selection-start-column="16" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/PlacesClustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#54#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -874,30 +764,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualization/UsMap.py">
+    <entry file="file://$PROJECT_DIR$/preprocessing/InferPlaceWithPlaceFrequency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="898">
+          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
           <folding>
-            <element signature="e#51#82#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/ReadGowalla.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -911,37 +784,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/KmeanClustering.py">
+    <entry file="file://$PROJECT_DIR$/preprocessing/ReadGowalla.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="25" column="13" selection-start-line="7" selection-start-column="16" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/PlacesClustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#54#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="1078">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing/PlaceFrequency.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/ReadData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+          <folding>
+            <marker date="1543373835024" expanded="true" signature="37:42" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-275769212/numpy/core/umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134">
+          <caret line="2962" column="4" selection-start-line="2962" selection-start-column="4" selection-end-line="2962" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/LdaAlpha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleLDA/FeatureSequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/Corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/Document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/LdaModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/LdaInference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1804">
+          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/LdaEstimate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
         </state>
       </provider>
     </entry>
