@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8c94bbf-8c8c-49c4-b8de-224d9a94cf9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/variationalLDA/Corpus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/Document.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaAlpha.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaEstimate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaInference.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/LdaModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/Utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variationalLDA/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/ReadGowalla.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/ReadGowalla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/variationalLDA/LdaEstimate.py" beforeDir="false" afterPath="$PROJECT_DIR$/variationalLDA/LdaEstimate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/variationalLDA/LdaModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/variationalLDA/LdaModel.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/variationalLDA/LdaModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="104">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -53,8 +43,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/variationalLDA/LdaEstimate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="236">
+              <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/variationalLDA/Corpus.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -144,19 +146,19 @@
         <option value="$PROJECT_DIR$/preprocessing/GetPlacesFromCoordinates1.py" />
         <option value="$PROJECT_DIR$/preprocessing/ReadGowalla.py" />
         <option value="$PROJECT_DIR$/preprocessing/PlaceFrequency.py" />
-        <option value="$PROJECT_DIR$/variationalLDA/LdaModel.py" />
         <option value="$PROJECT_DIR$/variationalLDA/Utils.py" />
         <option value="$PROJECT_DIR$/variationalLDA/LdaAlpha.py" />
         <option value="$PROJECT_DIR$/variationalLDA/Document.py" />
         <option value="$PROJECT_DIR$/variationalLDA/Corpus.py" />
         <option value="$PROJECT_DIR$/variationalLDA/LdaInference.py" />
+        <option value="$PROJECT_DIR$/variationalLDA/LdaModel.py" />
         <option value="$PROJECT_DIR$/variationalLDA/LdaEstimate.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1931" />
+    <option name="width" value="1415" />
     <option name="height" value="527" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -404,18 +406,18 @@
       <workItem from="1550816810503" duration="6211000" />
       <workItem from="1551609239558" duration="1806000" />
       <workItem from="1552572844625" duration="1802000" />
-      <workItem from="1553487504952" duration="22272000" />
+      <workItem from="1553487504952" duration="28546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161509000" />
+    <option name="totallyTimeSpent" value="167783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1931" height="527" extended-state="0" />
+    <frame x="-7" y="0" width="1415" height="527" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.09994655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4963145" visible="true" weight="0.13800739" />
       <window_info id="Structure" order="1" sideWeight="0.5036855" side_tool="true" weight="0.16311301" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -842,13 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/variationalLDA/Corpus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/variationalLDA/Document.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -856,10 +851,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/variationalLDA/Corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/variationalLDA/LdaModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="104">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -875,8 +877,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/variationalLDA/LdaEstimate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="236">
+          <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
