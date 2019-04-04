@@ -5,7 +5,7 @@ class LdaModel:
 	num_topics = 0
 	num_term = 0
 
-	def __init__(self, numTerms, numTopics):
+	def __init__(self):
 		pass
 
 	def set_model(self, num_term, num_torpic):
