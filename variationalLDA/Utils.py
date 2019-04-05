@@ -1,5 +1,6 @@
 import numpy as np
 
+
 GAMMA_ACCURATE = True
 INV810 = 1.234567901234568E-003
 HALFLN2 = 3.465735902799726e-001
@@ -31,7 +32,7 @@ def lgamma(x):
 		prec = x * x * x
 		prec *= prec
 		prec = INV810 / prec
-		return x * (lnx - 1. + .5 * np.log(x * (einvx - 1. / einvx) / 2. + prec))- .5 * lnx + Utils.HALFLN2PI
+		return x * (lnx - 1. + .5 * np.log(x * (einvx - 1. / einvx) / 2. + prec))- .5 * lnx + HALFLN2PI
 	else:
-		return x * (1.5 * lnx - 1. + .5 * np.log(einvx - 1. / einvx) - Utils.HALFLN2) - .5 * lnx + Utils.HALFLN2PI
+		return x * (1.5 * lnx - 1. + .5 * np.log(einvx - 1. / einvx) - HALFLN2) - .5 * lnx + HALFLN2PI
 

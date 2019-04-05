@@ -1,10 +1,11 @@
-from variationalLDA.Document import Document
+from Document import Document
 
 
 class Corpus:
-	docs = []
-	num_terms = 0
-	num_docs = 0
+	def __init__(self):
+		self.docs = []
+		self.num_terms = 0
+		self.num_docs = 0
 
 	def read(self, filename):
 		with open(filename, "r") as inputFile:
@@ -24,3 +25,5 @@ class Corpus:
 					if word >= self.num_terms:
 						self.num_terms = word + 1
 				self.docs.append(doc)
+		print(self.num_docs)
+		print(self.num_terms)

@@ -1,6 +1,6 @@
 import numpy as np
-import variationalLDA.LdaModel as LdaModel
-import variationalLDA.Utils as Utils
+import LdaModel as LdaModel
+import Utils as Utils
 
 
 class LdaInference:
@@ -10,10 +10,11 @@ class LdaInference:
 	@staticmethod
 	def inference(doc, model: LdaModel, var_gamma, phi):
 		converged = 1
-		phi_sum = 0
 		likelihood = 0
 		likelihood_old = -np.NINF
 		old_phi = []
+		for k in range(0, model.num_topics):
+			old_phi.append(0)
 
 		for k in range(0, model.num_topics):
 			var_gamma[k] = model.alpha + doc.total / float(model.num_topics)
@@ -58,7 +59,7 @@ class LdaInference:
 		dig = []
 
 		for k in range(0, model.num_topics):
-			dig.append(Utils.digamma(var_gamma_sum))
+			dig.append(Utils.digamma(var_gamma[k]))
 			var_gamma_sum += var_gamma[k]
 
 		dig_sum = Utils.digamma(var_gamma_sum)
@@ -74,10 +75,10 @@ class LdaInference:
 				- (var_gamma[k] - 1) * (dig[k] - dig_sum)
 
 			for n in range(0, doc.length):
-				if model.num_topics[k][doc.words[n]] > 0:
+				if model.class_word[k][doc.words[n]] > 0:
 					if phi[n][k] > 0:
 						likelihood += \
-							doc.counts[n] * (phi[n][k] * ((dig[k]-dig_sum) - np.log(phi[n][k]))) \
+							doc.counts[n] * (phi[n][k] * ((dig[k] - dig_sum) - np.log(phi[n][k]))) \
 							+ np.log(model.class_word[k][doc.words[n]]) \
 							- np.log(model.class_total[k])
 		return likelihood

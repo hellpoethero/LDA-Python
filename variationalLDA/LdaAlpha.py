@@ -1,5 +1,5 @@
-import variationalLDA.LdaModel as LdaModel
-import variationalLDA.Utils as Utils
+import LdaModel as LdaModel
+import Utils as Utils
 import numpy as np
 
 
