@@ -152,7 +152,7 @@ class LdaEstimate:
 			likelihood = LdaInference.inference(doc, model, var_gamma[d], phi)
 
 	@staticmethod
-	def estimate(alpha, num_topic, setting, data, start, output_dir):
+	def estimate(alpha, num_topic, setting, data, vocab, start, output_dir):
 		# parameter: est/inf <alpha> <k - num_topic> <setting> <data> <random/seed/*> <output directory>
 		LdaEstimate.INITIAL_ALPHA = alpha
 		LdaEstimate.K = num_topic
@@ -161,3 +161,6 @@ class LdaEstimate:
 		corpus.read(data)
 
 		model = LdaEstimate.run_em(start, output_dir, corpus)
+		model.read_vocab(vocab)
+		model.print_word_topic_distribution()
+		# topic_doc dis and word_topic_dis
