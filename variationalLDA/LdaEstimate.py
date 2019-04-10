@@ -1,9 +1,9 @@
 import random
+import numpy as np
 from LdaModel import LdaModel
 from LdaInference import LdaInference
 from LdaAlpha import LdaAlpha
 from Corpus import Corpus
-import numpy as np
 
 
 class LdaEstimate:
@@ -53,12 +53,7 @@ class LdaEstimate:
 	# calculate gamma and phi
 	@staticmethod
 	def doc_em(doc, gamma, model, next_model):
-		phi = []
-		for n in range(0, doc.length):
-			temp_array = []
-			for k in range(0, model.num_topics):
-				temp_array.append(0)
-			phi.append(temp_array)
+		phi = np.zeros([doc.length, model.num_topics])
 
 		likelihood = LdaInference.inference(doc, model, gamma, phi)
 		for n in range(0, doc.length):
@@ -78,12 +73,7 @@ class LdaEstimate:
 		likelihood_old = float("-inf")
 		print(likelihood_old)
 		converged = 1
-		var_gamma = []
-		for d in range(0, corpus.num_docs):
-			temp_array = []
-			for k in range(0, LdaEstimate.K):
-				temp_array.append(0)
-			var_gamma.append(temp_array)
+		var_gamma = np.zeros([corpus.num_docs, LdaEstimate.K])
 
 		model = LdaEstimate.initial_model(start, corpus, LdaEstimate.K, LdaEstimate.INITIAL_ALPHA)
 
@@ -94,8 +84,12 @@ class LdaEstimate:
 			next_model = LdaModel()
 			next_model.set_model(model.num_term, model.num_topics)
 			next_model.alpha = LdaEstimate.INITIAL_ALPHA
+
+			# E-step
 			for d in range(0, corpus.num_docs):
 				likelihood += LdaEstimate.doc_em(corpus.docs[d], var_gamma[d], model, next_model)
+
+			# M-step
 			if LdaEstimate.ESTIMATE_ALPHA == 1:
 				LdaAlpha.maximize_alpha(var_gamma, next_model, corpus.num_docs)
 
@@ -104,8 +98,7 @@ class LdaEstimate:
 			print(str(i) + " " + str(converged))
 			likelihood_old = likelihood
 
-			if i % LdaEstimate.LAG == 0:
-				pass
+			# break
 
 		return model
 
@@ -133,22 +126,11 @@ class LdaEstimate:
 	def infer(model_root, save, corpus):
 		model = LdaModel()
 		model.load_model(model_root)
-		var_gamma = []
-		for d in range(0, corpus.num_docs):
-			temp_array = []
-			for k in range(0, LdaEstimate.K):
-				temp_array.append(0)
-			var_gamma.append(temp_array)
+		var_gamma = np.zeros([corpus.num_docs, LdaEstimate.K])
 
 		for d in range(0, corpus.num_docs):
 			doc = corpus.docs[d]
-			phi = []
-			for k in range(0, model.num_topics):
-				temp_array = []
-				for n in range(0, doc.length):
-					temp_array.append(0)
-				phi.append(temp_array)
-
+			phi = np.zeros([doc.length, model.num_topics])
 			likelihood = LdaInference.inference(doc, model, var_gamma[d], phi)
 
 	@staticmethod

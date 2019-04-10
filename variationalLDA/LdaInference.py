@@ -1,6 +1,6 @@
 import numpy as np
-import LdaModel as LdaModel
-import Utils as Utils
+from LdaModel import LdaModel
+import Utils
 
 
 class LdaInference:
@@ -12,9 +12,7 @@ class LdaInference:
 		converged = 1
 		likelihood = 0
 		likelihood_old = -np.NINF
-		old_phi = []
-		for k in range(0, model.num_topics):
-			old_phi.append(0)
+		old_phi = np.zeros([model.num_topics])
 
 		for k in range(0, model.num_topics):
 			var_gamma[k] = model.alpha + doc.total / float(model.num_topics)
@@ -56,10 +54,10 @@ class LdaInference:
 		likelihood = 0
 		dig_sum = 0
 		var_gamma_sum = 0
-		dig = []
+		dig = np.zeros([model.num_topics])
 
 		for k in range(0, model.num_topics):
-			dig.append(Utils.digamma(var_gamma[k]))
+			dig[k] = Utils.digamma(var_gamma[k])
 			var_gamma_sum += var_gamma[k]
 
 		dig_sum = Utils.digamma(var_gamma_sum)

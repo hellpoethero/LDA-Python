@@ -1,5 +1,5 @@
-import LdaModel as LdaModel
-import Utils as Utils
+import LdaModel
+import Utils
 import numpy as np
 
 
