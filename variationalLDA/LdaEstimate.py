@@ -1,5 +1,7 @@
 import random
+import math
 import numpy as np
+import time
 from LdaModel import LdaModel
 from LdaInference import LdaInference
 from LdaAlpha import LdaAlpha
@@ -31,7 +33,7 @@ class LdaEstimate:
 
 			for k in range(0, num_topics):
 				for i in range(0, LdaEstimate.NUM_INIT):
-					d = int(np.floor(LdaEstimate.myrand() * corpus.num_docs))
+					d = int(math.floor(LdaEstimate.myrand() * corpus.num_docs))
 					doc = corpus.docs[d]
 					for n in range(0, doc.length):
 						model.class_word[k][doc.words[n]] += doc.counts[n]
@@ -55,12 +57,18 @@ class LdaEstimate:
 	def doc_em(doc, gamma, model, next_model):
 		phi = np.zeros([doc.length, model.num_topics])
 
+		start = time.time()
+
 		likelihood = LdaInference.inference(doc, model, gamma, phi)
+		checkpoint1 = time.time()
+		# print(checkpoint1 - start, end=" ")
 		for n in range(0, doc.length):
 			for k in range(0, model.num_topics):
 				next_model.class_word[k][doc.words[n]] += doc.counts[n] * phi[n][k]
 				next_model.class_total[k] += doc.counts[n] * phi[n][k]
 		# print(likelihood)
+		end = time.time()
+		# print(end - start)
 		return likelihood
 
 	@staticmethod
@@ -71,7 +79,6 @@ class LdaEstimate:
 	@staticmethod
 	def run_em(start, directory, corpus):
 		likelihood_old = float("-inf")
-		print(likelihood_old)
 		converged = 1
 		var_gamma = np.zeros([corpus.num_docs, LdaEstimate.K])
 
@@ -87,6 +94,7 @@ class LdaEstimate:
 
 			# E-step
 			for d in range(0, corpus.num_docs):
+				print(d, end=" ")
 				likelihood += LdaEstimate.doc_em(corpus.docs[d], var_gamma[d], model, next_model)
 
 			# M-step
@@ -94,8 +102,10 @@ class LdaEstimate:
 				LdaAlpha.maximize_alpha(var_gamma, next_model, corpus.num_docs)
 
 			model = next_model
-			converged = (likelihood_old - likelihood) / likelihood
+			# if i > 1:
+			converged = (likelihood_old - likelihood) / likelihood_old
 			print(str(i) + " " + str(converged))
+			print(likelihood)
 			likelihood_old = likelihood
 
 			# break
