@@ -30,6 +30,8 @@ def convert_to_lda_input(user_sequences, min_sequence_length, min_num_place, loc
 	trains = []
 	validations = []
 	random_places = []
+
+	out_sequences = []
 	for sequence in user_sequences:
 		place_set = list(set(sequence))
 		if len(place_set) >= min_num_place and len(sequence) >= min_sequence_length:
@@ -47,6 +49,12 @@ def convert_to_lda_input(user_sequences, min_sequence_length, min_num_place, loc
 				random_false = random.randint(0, len(location_ids))
 			random_places.append(random_false)
 
+			temp = []
+			for place in sequence:
+				place_index = place_indexes[place_set.index(place)]
+				temp.append(place_index)
+			out_sequences.append(temp)
+
 			sequence = sequence[:-1]
 			random.shuffle(sequence)
 			for place in sequence:
@@ -58,12 +66,15 @@ def convert_to_lda_input(user_sequences, min_sequence_length, min_num_place, loc
 
 			trains.append(train)
 			validations.append(validation)
-	# write_file(trains, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_train.dat")
-	# write_file(validations, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_validation.dat")
-	# with open(folder_path + filename_prefix + "_" + str(min_sequence_length) + "_test.dat", "w") as outputFile:
-	# 	outputFile.write("\n".join(map(str, tests)))
+	write_file(trains, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_train.dat")
+	write_file(validations, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_validation.dat")
+	with open(folder_path + filename_prefix + "_" + str(min_sequence_length) + "_test.dat", "w") as outputFile:
+		outputFile.write("\n".join(map(str, tests)))
 	with open(folder_path + filename_prefix + "_" + str(min_sequence_length) + "_random.dat", "w") as outputFile:
 		outputFile.write("\n".join(map(str, random_places)))
+	write_file_as_sequence(trains, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_train_seq.dat")
+	write_file_as_sequence(validations, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_validation_seq.dat")
+	write_file_as_sequence(out_sequences, folder_path + filename_prefix + "_" + str(min_sequence_length) + "_seq.dat")
 
 
 def write_file(data, output_filename):
@@ -77,8 +88,17 @@ def write_file(data, output_filename):
 			outputFile.write("\n")
 
 
+def write_file_as_sequence(data, filename):
+	with open(filename, "w") as outputFile:
+		for sequence in data:
+			outputFile.write(" ".join(map(str, sequence)) + "\n")
+			# print(" ".join(map(str, sequence)) + "\n")
+
+
+
+
 loc_file = "D:/Research/Dataset/checkin/us_canada.txt"
 checkins_file = "D:/Research/Dataset/checkin/Gowalla_totalCheckins_chekin10.txt"
 us_check_ins = get_check_ins_by_location(loc_file, checkins_file)
 sequences = get_user_sequence(us_check_ins, 5)
-convert_to_lda_input(sequences, 6, 2, loc_file, 0.8, "D:/Research/Dataset/checkin/New folder/", "us")
+convert_to_lda_input(sequences, 6, 2, loc_file, 0.8, "D:/Research/Dataset/checkin/us/", "us")
