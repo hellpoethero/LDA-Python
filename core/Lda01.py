@@ -9,7 +9,7 @@ from time import time
 from functools import reduce
 
 
-def init(df, Ks, iters, top_k, datasetName, outFile):
+def init(df, Ks, iters, top_k, datasetName, outFile, folder_name):
 	num_record = len(df)
 	print(num_record)
 
@@ -58,13 +58,13 @@ def init(df, Ks, iters, top_k, datasetName, outFile):
 	print(time() - start)
 	print("done")
 
-	run(df, 2, 1, top_k, datasetName, outFile)
+	run(df, 2, 1, top_k, datasetName, outFile, folder_name)
 	for K in Ks:
 		for iteration in iters:
-			run(df, K, iteration, top_k, datasetName, outFile)
+			run(df, K, iteration, top_k, datasetName, outFile, folder_name)
 
 
-def run(df, K, iteration, top_k, datasetName, outFile):
+def run(df, K, iteration, top_k, datasetName, outFile, folder_name):
 	num_record = len(df)
 	print(num_record)
 
@@ -166,7 +166,6 @@ def run(df, K, iteration, top_k, datasetName, outFile):
 
 		roleVenue = updateRoleVenue(df_table)
 
-	print(len(roleVenue[0]))
 	print("Optimize done")
 	valid_user = df_table_backup.groupby('user_id')['train'].mean()
 	valid_user = valid_user[(valid_user > 0.001) & (valid_user < 0.999)]
@@ -180,8 +179,6 @@ def run(df, K, iteration, top_k, datasetName, outFile):
 	in_top = np.zeros(len(df_table_testing))
 	ranking_avg = np.zeros(len(df_table_testing))
 	print("calculate ranking")
-
-	print(len(roleVenue[0]))
 
 	for index, row in df_table_testing.iterrows():
 		roleVenue2 = np.array(roleVenue)
@@ -198,6 +195,7 @@ def run(df, K, iteration, top_k, datasetName, outFile):
 	print(K)
 	df_table_testing['in_top'] = in_top
 	df_table_testing['rank'] = ranking_avg
+	print(np.mean(df_table_testing['rank']))
 
 	recall = np.mean(df_table_testing.groupby('user_id')['in_top'].mean().values)
 	print(recall)
@@ -209,9 +207,12 @@ def run(df, K, iteration, top_k, datasetName, outFile):
 	recall_new = np.mean(df_table_testing[df_table_testing['repeated'] == 0].groupby('user_id')['in_top'].mean().values)
 	print(recall_new)
 
-	outFile.write(str(K) + "," + str(iteration) + "," + str(recall) + "," + str(recall_all) + "," + str(recall_repeated) + "," + str(recall_new) + "," + str(int(avg_rank)) + "," +  "\n")
+	outFile.write(str(K) + "," + str(iteration) + "," + str(recall) + "," + str(recall_all) + "," + str(recall_repeated)
+				  + "," + str(recall_new) + "," + str(int(avg_rank)) + ","
+				  + str(np.mean(df_table_testing[df_table_testing['repeated'] == 1]['rank'])) + ","
+				  + str(np.mean(df_table_testing[df_table_testing['repeated'] == 0]['rank'])) + "\n")
 
-	df_table_testing[['user_id', 'loc_id', 'rank']].to_csv(
-		"D:/Research/Project/LDA/results/" + datasetName[:-1] + "_K" + str(K) + "_I" + str(iteration) + ".csv")
+	df_table_testing[['user_id', 'loc_id', 'repeated', 'rank']].to_csv(
+		folder_name + "/" + datasetName[:-1] + "_K" + str(K) + "_I" + str(iteration) + ".csv")
 
 

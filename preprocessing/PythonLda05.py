@@ -9,10 +9,10 @@ from time import time
 from functools import reduce
 # from guppy import hpy
 
-K = 5
+K = 2
 path = "D:/Download/data/"
 # datasetName = "lastfm_sample_190617/"
-datasetName = "reddit_sample/"
+datasetName = "lastfm/"
 # "/Users/yoonsik/Downloads/
 trainFile = path + datasetName + "train.csv"
 validationFile = path + datasetName + "validation.csv"
@@ -33,7 +33,7 @@ def function01(data, train):
 		array.extend(temp)
 
 	df = pd.DataFrame(array)
-	# df = df.sample(frac=0.4, replace=True, random_state=1)
+	# df = df.sample(frac=0.5, replace=True, random_state=1)
 	df.columns = ["user_id", "loc_id", "train"]
 	return df
 
@@ -147,16 +147,6 @@ def toSparseMatrix(x):
 	return sparse.coo_matrix((V, (I, J)), shape=(K, venueSize))
 
 
-#
-# def updateRoleVenue(x):
-#     roleVenue = np.ones([K, len(venuelist)]) / len(venuelist)
-#     for index, row in x.iterrows():
-#         if row['train'] > 0:
-#             roleVenue[:, row['loc_id']] += row['phi']
-#     roleVenue /= roleVenue.sum(axis=1)[:, np.newaxis]
-#     return roleVenue
-
-
 def updateRoleVenue(x):
 	roleVenue = np.ones([K, len(venuelist)]) / len(venuelist)
 
@@ -212,10 +202,10 @@ g = np.array(g.tolist())
 g = g.T
 g = g / float(sum(g))
 
+start = time()
 
-print(len(roleVenue[0]))
 print("optimize")
-numIter = 50
+numIter = 1
 for i in range(numIter):
 	print("iter " + str(i + 1))
 
@@ -239,8 +229,8 @@ for i in range(numIter):
 
 	roleVenue = updateRoleVenue(df_table)
 
+print(time() - start)
 
-print(len(roleVenue[0]))
 print("Optimize done")
 valid_user = df_table_backup.groupby('user_id')['train'].mean()
 valid_user = valid_user[(valid_user > 0.001) & (valid_user < 0.999)]
@@ -257,8 +247,6 @@ df_table_testing = df_table_testing[df_table_testing['user_id'].isin(valid_user)
 in_top = np.zeros(len(df_table_testing))
 ranking_avg = np.zeros(len(df_table_testing))
 print("calculate ranking")
-
-print(len(roleVenue[0]))
 
 for index, row in df_table_testing.iterrows():
 	roleVenue2 = np.array(roleVenue)
